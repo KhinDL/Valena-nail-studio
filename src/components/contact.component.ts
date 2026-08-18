@@ -10,6 +10,18 @@ import { Component } from '@angular/core';
           <div style="display:flex;align-items:center;gap:15px;color:#766b67;font-size:13px;"><span class="contact-icon">◌</span><span>403-475-7888</span></div>
           <a href="mailto:velenanailstudio@gmail.com"><span class="contact-icon">✉</span><span>velenanailstudio@gmail.com</span></a>
           <a href="https://www.instagram.com/velenanail.yyc?igsh=MWVhbHBwM3o5ejFibw%3D%3D&utm_source=qr" target="_blank" rel="noopener"><span class="contact-icon">◎</span><span>@velenanail.yyc</span></a>
+        </div>
+        <div class="store-hours reveal-up">
+          <h3 class="hours-title"><span class="contact-icon">◷</span>Store Hours</h3>
+          <ul class="hours-list">
+            <li><span class="day">Monday</span><span class="time closed">Closed</span></li>
+            <li><span class="day">Tuesday</span><span class="time">10:00 AM – 7:00 PM</span></li>
+            <li><span class="day">Wednesday</span><span class="time">10:00 AM – 7:00 PM</span></li>
+            <li><span class="day">Thursday</span><span class="time">10:00 AM – 7:00 PM</span></li>
+            <li><span class="day">Friday</span><span class="time">10:00 AM – 7:00 PM</span></li>
+            <li><span class="day">Saturday</span><span class="time">10:00 AM – 6:00 PM</span></li>
+            <li><span class="day">Sunday</span><span class="time closed">Closed</span></li>
+          </ul>
         </div></div>
         <div class="col-lg-6 offset-lg-1 reveal-up"><div class="map-card">
           <iframe 
