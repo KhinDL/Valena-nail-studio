@@ -34,59 +34,6 @@
   font-size: 15px;
 }
 
-/* Store hours */
-.store-hours {
-  margin-top: 36px;
-  padding-top: 28px;
-  border-top: 1px solid var(--line);
-}
-
-.hours-title {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  margin-bottom: 18px;
-  font: 500 18px var(--serif);
-  color: var(--ink);
-}
-
-.hours-list {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  display: grid;
-  gap: 10px;
-}
-
-.hours-list li {
-  display: flex;
-  justify-content: space-between;
-  align-items: baseline;
-  padding-bottom: 10px;
-  border-bottom: 1px dashed #e8ddd5;
-  font-size: 13px;
-}
-
-.hours-list li:last-child {
-  border-bottom: 0;
-  padding-bottom: 0;
-}
-
-.hours-list .day {
-  color: var(--muted);
-  letter-spacing: .03em;
-}
-
-.hours-list .time {
-  color: var(--ink);
-  font-weight: 500;
-}
-
-.hours-list .time.closed {
-  color: #b89a8e;
-  font-style: italic;
-}
-
 /* Map */
 .map-card {
   height: 440px;
