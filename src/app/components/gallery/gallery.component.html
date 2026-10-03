@@ -1,0 +1,25 @@
+<section id="gallery" class="section section-anchor gallery-section">
+  <div class="container">
+    <div class="gallery-heading reveal-up">
+      <div><p class="eyebrow">A little inspiration</p><h2>Our <em>work.</em></h2></div>
+      <a class="text-link" href="https://www.instagram.com/velenanail.yyc?igsh=MWVhbHBwM3o5ejFibw%3D%3D&utm_source=qr" target="_blank" rel="noopener">Follow along on Instagram <span>↗</span></a>
+    </div>
+    <div class="gallery-grid">
+      @for (image of images; track image.src) {
+        <figure class="gallery-item reveal-up" (click)="open(image)" role="button" tabindex="0" (keydown.enter)="open(image)" (keydown.space)="open(image)">
+          <img [src]="image.src" [alt]="image.alt" loading="lazy" />
+          <span class="gallery-zoom">⤢</span>
+        </figure>
+      }
+    </div>
+    <div class="gallery-footer"><span>New designs</span><span class="gold-dot"></span><span>@velenanail.yyc</span></div>
+  </div>
+</section>
+
+@if (active()) {
+  <div class="lightbox" (click)="close()" role="dialog" aria-modal="true" aria-label="Enlarged image">
+    <button class="lightbox-close" type="button" (click)="close()" aria-label="Close">✕</button>
+    <img class="lightbox-img" [src]="active()!.src" [alt]="active()!.alt" />
+    <p class="lightbox-caption">{{ active()!.alt }}</p>
+  </div>
+}

@@ -1,0 +1,39 @@
+.booking-banner {
+  position: relative;
+  overflow: hidden;
+  padding: 100px 0;
+  background: var(--rose-deep);
+  color: #fff;
+  text-align: center;
+}
+
+.booking-content {
+  position: relative;
+  z-index: 1;
+}
+
+.booking-banner h2 {
+  margin-bottom: 32px;
+}
+
+.booking-banner h2 em {
+  color: #f4d5be;
+}
+
+.booking-orb {
+  position: absolute;
+  width: 420px;
+  height: 420px;
+  border: 1px solid rgba(255, 236, 220, .17);
+  border-radius: 50%;
+}
+
+.orb-left {
+  top: -210px;
+  left: -120px;
+}
+
+.orb-right {
+  right: -150px;
+  bottom: -270px;
+}
