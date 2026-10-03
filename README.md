@@ -65,20 +65,25 @@ A manual deploy is also possible: build locally and drag the `dist/demo/browser`
 
 ```
 src/
-├── app.component.ts          # Root component composing all sections
 ├── main.ts                   # Bootstrap entry
 ├── index.html                # HTML shell
-├── global_styles.css         # Theme, layout, and component styles
-└── components/
-    ├── navbar.component.ts
-    ├── hero.component.ts
-    ├── services.component.ts
-    ├── gallery.component.ts
-    ├── about.component.ts
-    ├── booking.component.ts
-    ├── contact.component.ts
-    └── footer.component.ts
+├── styles.css                # Global theme, typography, and shared classes
+├── assets/                   # Images
+└── app/
+    ├── app.component.ts      # Root component composing all sections
+    ├── app.component.html
+    └── components/
+        ├── navbar/
+        ├── hero/
+        ├── services/
+        ├── gallery/
+        ├── about/
+        ├── booking/
+        ├── contact/
+        └── footer/
 ```
+
+Each component folder holds three files: `<name>.component.ts` (logic), `<name>.component.html` (template), and `<name>.component.css` (styles scoped to that component).
 
 ## License
 

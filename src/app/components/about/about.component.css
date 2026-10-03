@@ -1,0 +1,92 @@
+.about-section {
+  background: var(--cream);
+}
+
+.about-image-wrap {
+  position: relative;
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 0 34px 34px 0;
+}
+
+.about-image-wrap::after {
+  content: '';
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 78%;
+  height: 78%;
+  border: 1px solid var(--gold);
+  z-index: 0;
+}
+
+.about-image-wrap img {
+  display: block;
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  aspect-ratio: .82;
+  object-fit: cover;
+  object-position: center;
+  filter: saturate(.83);
+}
+
+.about-stamp {
+  position: absolute;
+  right: -4px;
+  top: 36px;
+  z-index: 2;
+  width: 94px;
+  height: 94px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  background: var(--rose-deep);
+  color: #fff3ec;
+  font-size: 10px;
+  letter-spacing: .08em;
+  line-height: 1.15;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.about-stamp em {
+  font: italic 20px var(--serif);
+  text-transform: none;
+}
+
+.about-section h2 {
+  margin-bottom: 30px;
+}
+
+.about-lede {
+  margin-bottom: 15px;
+  font: 20px/1.45 var(--serif);
+}
+
+.body-copy {
+  max-width: 420px;
+  margin-bottom: 30px;
+  color: var(--muted);
+  line-height: 1.85;
+}
+
+.about-signature {
+  color: var(--rose-deep);
+  font: italic 28px var(--serif);
+}
+
+.about-signature span {
+  color: var(--gold);
+  font-style: normal;
+  font-size: 19px;
+}
+
+@media (max-width: 767.98px) {
+  .about-image-wrap {
+    margin-bottom: 20px;
+    padding-right: 20px;
+  }
+}

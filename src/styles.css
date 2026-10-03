@@ -1,0 +1,232 @@
+/* Global styles: design tokens, base elements, and classes shared by more than one component.
+   Styles used by a single component live next to it in src/app/components/<name>/. */
+
+:root {
+  --ink: #302a28;
+  --muted: #766b67;
+  --cream: #fbf7f4;
+  --blush: #f3e3df;
+  --rose: #b7807c;
+  --rose-deep: #825852;
+  --gold: #c8a96e;
+  --line: #e5d9d3;
+  --serif: 'Playfair Display', Georgia, serif;
+  --sans: 'DM Sans', Arial, sans-serif;
+}
+
+/* Base */
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: var(--cream);
+  color: var(--ink);
+  font-family: var(--sans);
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  transition: color .25s ease, background-color .25s ease, transform .25s ease;
+}
+
+/* Typography */
+h1, h2, h3, p {
+  margin-top: 0;
+}
+
+h1, h2 {
+  font-family: var(--serif);
+  font-weight: 400;
+  letter-spacing: -.035em;
+  line-height: 1.04;
+}
+
+h1 {
+  margin-bottom: 24px;
+  font-size: clamp(56px, 7vw, 96px);
+}
+
+h2 {
+  margin-bottom: 24px;
+  font-size: clamp(43px, 5.2vw, 68px);
+}
+
+h1 em, h2 em {
+  color: var(--gold);
+  font-weight: 400;
+}
+
+.eyebrow {
+  margin: 0 0 18px;
+  color: var(--rose-deep);
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: .25em;
+  text-transform: uppercase;
+}
+
+.light-eyebrow {
+  color: #ead1c4;
+}
+
+/* Sections */
+.section {
+  padding: 120px 0;
+}
+
+.section-anchor {
+  scroll-margin-top: 76px;
+}
+
+.section-intro {
+  max-width: 490px;
+  margin: 0 auto;
+  color: var(--muted);
+  line-height: 1.8;
+}
+
+/* Brand mark (navbar + footer) */
+.brand-mark {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: flex-start;
+  line-height: 1;
+  color: var(--ink);
+}
+
+.brand-name {
+  font: 500 27px/1 var(--serif);
+  letter-spacing: .02em;
+}
+
+.brand-subtitle {
+  margin-top: 6px;
+  font-size: 8px;
+  font-weight: 600;
+  letter-spacing: .34em;
+  color: var(--rose-deep);
+}
+
+/* Buttons and links */
+.btn {
+  border-radius: 0;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  padding: 14px 23px;
+  border: 1px solid transparent;
+}
+
+.btn-gold {
+  color: #fff;
+  background: var(--gold);
+  border-color: var(--gold);
+}
+
+.btn-gold:hover {
+  color: #fff;
+  background: var(--rose-deep);
+  border-color: var(--rose-deep);
+  transform: translateY(-2px);
+}
+
+.btn-light-gold {
+  color: var(--ink);
+  background: #fff9f0;
+  border-color: #fff9f0;
+}
+
+.btn-light-gold:hover {
+  color: var(--ink);
+  background: #fff;
+  transform: translateY(-2px);
+}
+
+.btn span, .text-link span {
+  margin-left: 8px;
+  font-size: 15px;
+}
+
+.text-link {
+  display: inline-flex;
+  align-items: center;
+  color: var(--rose-deep);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  border-bottom: 1px solid var(--rose-deep);
+  padding-bottom: 5px;
+}
+
+.text-link:hover {
+  color: var(--gold);
+  border-color: var(--gold);
+}
+
+.light-link {
+  color: #fff;
+  border-color: rgba(255, 255, 255, .6);
+}
+
+/* Entrance animation */
+.reveal-up {
+  animation: rise-in .7s ease both;
+}
+
+@keyframes rise-in {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    scroll-behavior: auto !important;
+    animation-duration: .01ms !important;
+    transition-duration: .01ms !important;
+  }
+}
+
+/* Responsive */
+@media (max-width: 991.98px) {
+  .section {
+    padding: 90px 0;
+  }
+}
+
+@media (max-width: 767.98px) {
+  body {
+    font-size: 14px;
+  }
+
+  h1 {
+    font-size: clamp(51px, 15vw, 72px);
+  }
+
+  .section {
+    padding: 76px 0;
+  }
+}
+
+@media (max-width: 380px) {
+  .btn {
+    padding-left: 17px;
+    padding-right: 17px;
+  }
+}

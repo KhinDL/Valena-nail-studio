@@ -10,29 +10,8 @@ interface ServiceCard {
 @Component({
   selector: 'app-services',
   standalone: true,
-  template: `
-    <section id="services" class="section section-anchor services-section">
-      <div class="container">
-        <div class="section-heading centered-heading reveal-up">
-          <p class="eyebrow">Our services</p>
-          <h2>Small details.<br /><em>Beautifully done.</em></h2>
-          <p class="section-intro">From timeless, polished essentials to expressive nail art, every appointment is an invitation to slow down and feel cared for.</p>
-        </div>
-        <div class="row g-4 service-grid">
-          @for (service of services; track service.number) {
-            <div class="col-md-6 col-lg-4">
-              <article class="service-card reveal-up">
-                <div class="service-top"><span class="service-number">{{ service.number }}</span><span class="service-icon">{{ service.icon }}</span></div>
-                <h3>{{ service.title }}</h3>
-                <p>{{ service.description }}</p>
-                <span class="card-arrow">↗</span>
-              </article>
-            </div>
-          }
-        </div>
-      </div>
-    </section>
-  `,
+  templateUrl: './services.component.html',
+  styleUrl: './services.component.css',
 })
 export class ServicesComponent {
 readonly services: ServiceCard[] = [
