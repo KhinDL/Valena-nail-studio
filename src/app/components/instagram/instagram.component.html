@@ -1,0 +1,20 @@
+@if (posts().length) {
+  <section id="instagram" class="section section-anchor instagram-section">
+    <div class="container">
+      <div class="instagram-heading reveal-up">
+        <div><p class="eyebrow">Fresh from the studio</p><h2>Latest on <em>Instagram.</em></h2></div>
+        <a class="text-link" href="https://www.instagram.com/velenanail.yyc?igsh=MWVhbHBwM3o5ejFibw%3D%3D&utm_source=qr" target="_blank" rel="noopener">@velenanail.yyc <span>↗</span></a>
+      </div>
+      <div class="instagram-grid">
+        @for (post of posts(); track post.id) {
+          <a class="instagram-item reveal-up" [href]="post.permalink" target="_blank" rel="noopener">
+            <img [src]="post.image" [alt]="post.alt" loading="lazy" />
+            @if (post.isVideo) {
+              <span class="instagram-badge" aria-hidden="true">▶</span>
+            }
+          </a>
+        }
+      </div>
+    </div>
+  </section>
+}

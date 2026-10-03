@@ -77,6 +77,7 @@ src/
         ├── hero/
         ├── services/
         ├── gallery/
+        ├── instagram/
         ├── about/
         ├── booking/
         ├── contact/

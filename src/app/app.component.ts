@@ -3,6 +3,7 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import { HeroComponent } from './components/hero/hero.component';
 import { ServicesComponent } from './components/services/services.component';
 import { GalleryComponent } from './components/gallery/gallery.component';
+import { InstagramComponent } from './components/instagram/instagram.component';
 import { AboutComponent } from './components/about/about.component';
 import { BookingComponent } from './components/booking/booking.component';
 import { ContactComponent } from './components/contact/contact.component';
@@ -11,7 +12,7 @@ import { FooterComponent } from './components/footer/footer.component';
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [NavbarComponent, HeroComponent, ServicesComponent, GalleryComponent, AboutComponent, BookingComponent, ContactComponent, FooterComponent],
+  imports: [NavbarComponent, HeroComponent, ServicesComponent, GalleryComponent, InstagramComponent, AboutComponent, BookingComponent, ContactComponent, FooterComponent],
   templateUrl: './app.component.html',
 })
 export class AppComponent {}
