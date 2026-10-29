@@ -1,6 +1,6 @@
 import { Component, OnInit, signal } from '@angular/core';
 
-const FEED_URL = 'https://feeds.behold.so/qkCQpf5M5xJFWwnCNpY5';
+const FEED_URL = 'https://feeds.behold.so/r5TbnnD1rZFDL15MEHM2';
 const POST_LIMIT = 6;
 
 interface BeholdPost {
